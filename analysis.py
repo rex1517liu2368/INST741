@@ -18,7 +18,6 @@ jieba.load_userdict("dictionaryForProcessing/danmudictuni.txt")
         
 #generate comments
 def generateDanmu(filename):
-    #创立字典、增加新词,使用字典
     jieba.load_userdict("dictionaryForProcessing/danmudictuni.txt")
 
     #read files
@@ -53,10 +52,10 @@ def generateDanmu(filename):
     return b
              
 def generateComment(filename):
-     #创立字典、增加新词,使用字典 using the dictionary
+     #using the dictionary
     jieba.load_userdict("dictionaryForProcessing/danmudictuni.txt")
 
-    #读取文件 load file
+    #load file
     stopList=[]
     stopFile = open('dictionaryForProcessing/stop_words.txt','r',encoding='ANSI')
     for stopWord in stopFile:
